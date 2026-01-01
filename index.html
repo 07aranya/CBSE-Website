@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBSE - Central Board of Secondary Education</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header id="home">
+        <div class="logo-container">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/CBSE_new_logo.svg/1200px-CBSE_new_logo.svg.png" alt="CBSE Logo" class="logo">
+            <div class="header-text">
+                <h1>Central Board of Secondary Education</h1>
+                <p>Ministry of Education, Government of India</p>
+            </div>
+        </div>
+
+        <div class="header-controls">
+            <div class="font-size-controls">
+                <button id="font-decrease" title="Decrease Font Size">A-</button>
+                <button id="font-reset" title="Reset Font Size">A</button>
+                <button id="font-increase" title="Increase Font Size">A+</button>
+            </div>
+            
+            <select id="font-selector" class="font-toggle">
+                <option value="default">Default Font</option>
+                <option value="serif">Official (Serif)</option>
+                <option value="mono">Typewriter (Mono)</option>
+                <option value="readable">High Readability</option>
+            </select>
+
+            <button id="theme-toggle" class="btn-toggle">
+                <i class="fas fa-moon"></i> Dark Mode
+            </button>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#about"><i class="fas fa-info-circle"></i> About CBSE</a></li>
+            <li><a href="#exams"><i class="fas fa-file-alt"></i> Examinations</a></li>
+            <li><a href="saras.html"><i class="fas fa-handshake"></i> Affiliation</a></li>
+            <li><a href="#student"><i class="fas fa-user-graduate"></i> Student Corner</a></li>
+            <li><a href="#contact"><i class="fas fa-phone-alt"></i> Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="news-ticker">
+        <span class="ticker-label">LATEST NEWS</span>
+        <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+            <a href="#"> <i class="fas fa-new"></i> <strong>[NEW]</strong> Date Sheet for Class X & XII Board Exams 2025 Released</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+            <a href="#"> <i class="fas fa-bullhorn"></i> Guidelines for Centre Superintendents for Practical Exams 2025</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+            <a href="#"> <i class="fas fa-award"></i> CBSE Merit Scholarship Scheme for Single Girl Child - Apply Now</a> &nbsp;&nbsp;|&nbsp;&nbsp; 
+            <a href="#"> <i class="fas fa-file-alt"></i> Circular: Extension of Last Date for Registration of Class IX/XI Students</a>
+        </marquee>
+    </div>
+
+    <main class="container">
+        
+        <div class="intro-section">
+            <h2>Welcome to CBSE</h2>
+            <p class="subtitle">Committed to Equity and Excellence in Education</p>
+            
+            <div class="info-box">
+                <h3 style="color: var(--primary-color); margin-bottom: 10px;">About the Board</h3>
+                <p>The Central Board of Secondary Education (CBSE) is a national level board of education in India for public and private schools, controlled and managed by the Government of India. The Board is committed to providing quality education to promote intellectual, social, and cultural vivacity among its learners.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> Holistic Development</li>
+                    <li><i class="fas fa-check-circle"></i> Standardized Curriculum</li>
+                    <li><i class="fas fa-check-circle"></i> Innovation in Teaching</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="portal-grid">
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-globe"></i></div>
+                <h3>Main Website</h3>
+                <p>Access circulars, publications, and board information.</p>
+                <a href="main-website.html" class="btn-card">Visit Site</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>Pariksha Sangam</h3>
+                <p>Comprehensive portal for schools, regional offices, and HO.</p>
+                <a href="pariksha.html" class="btn-card">Visit Site</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-poll-h"></i></div>
+                <h3>Results</h3>
+                <p>View Board Examination results for Class X and XII.</p>
+                <a href="results.html" class="btn-card">View Results</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-school"></i></div>
+                <h3>SARAS</h3>
+                <p>School Affiliation Re-Engineered Automation System.</p>
+                <a href="saras.html" class="btn-card">Visit Site</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-book-reader"></i></div>
+                <h3>Academic Website</h3>
+                <p>Curriculum, syllabi, and sample question papers.</p>
+                <a href="academic.html" class="btn-card">Visit Site</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <h3>Training Triveni</h3>
+                <p>Capacity building programmes for teachers.</p>
+                <a href="training.html" class="btn-card">Visit Site</a>
+            </div>
+        </div>
+
+        <section id="about" class="content-section">
+            <h2><i class="fas fa-info-circle"></i> About CBSE</h2>
+            <p>Established in 1929, the Board serves over 27,000 schools in India and 240 schools in 28 foreign countries.</p>
+            <br>
+            <h3><strong>Core Objectives:</strong></h3>
+            <div class="objectives-grid">
+                <div class="obj-box">
+                    <h4>Standardization</h4>
+                    <p>To prescribe conditions of examinations and conduct public examinations at the end of Class X and XII.</p>
+                </div>
+                <div class="obj-box">
+                    <h4>Innovation</h4>
+                    <p>To define appropriate approaches of academic activities to provide stress-free, child-centered and holistic education.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="exams" class="content-section">
+            <h2><i class="fas fa-file-alt"></i> Examinations</h2>
+            <p>The Board conducts the final examinations for Class 10 and Class 12 every spring. It also conducts the CTET and other entrance tests.</p>
+            <br>
+            <ul class="info-list">
+                <li><i class="fas fa-calendar-check"></i> <strong>Annual Board Exams:</strong> Typically held in February - April.</li>
+                <li><i class="fas fa-user-clock"></i> <strong>Compartment Exams:</strong> Held for students who need a second attempt (usually in July).</li>
+                <li><i class="fas fa-user-check"></i> <strong>Private Candidates:</strong> Direct admission facilities for female candidates and working professionals.</li>
+                <li><i class="fas fa-eye"></i> <strong>Verification of Marks:</strong> Portal opens 5 days after result declaration.</li>
+            </ul>
+        </section>
+
+        <section id="student" class="content-section">
+            <h2><i class="fas fa-user-graduate"></i> Student Corner</h2>
+            <p>A dedicated space for student resources, mental health support, and academic aids.</p>
+            
+            <div class="contact-grid" style="margin-top: 20px;">
+                <div class="card flat-card">
+                    <h4><i class="fas fa-book-open"></i> Sample Papers</h4>
+                    <p>Download previous years' Question Papers and Marking Schemes.</p>
+                    <a href="#" class="link-arrow">Download Now &rarr;</a>
+                </div>
+
+                <div class="card flat-card">
+                    <h4><i class="fas fa-mobile-alt"></i> DigiLocker</h4>
+                    <p>Access your Marksheets, Passing Certificates, and Migration Certificates digitally.</p>
+                    <a href="#" class="link-arrow">Go to DigiLocker &rarr;</a>
+                </div>
+
+                <div class="card flat-card">
+                    <h4><i class="fas fa-brain"></i> Counseling</h4>
+                    <p>Tele-counseling facility available during exam time. Toll Free: 1800-11-8004.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2><i class="fas fa-phone-alt"></i> Contact Us</h2>
+            <div class="contact-grid">
+                <div>
+                    <h3 style="margin-bottom: 10px;">Head Office</h3>
+                    <p><strong>Central Board of Secondary Education</strong></p>
+                    <p>Shiksha Kendra-2, Community Centre,</p>
+                    <p>Preet Vihar, Delhi - 110092</p>
+                    <br>
+                    <p><i class="fas fa-phone"></i> <strong>Phone:</strong> 011-22509256, 22509257</p>
+                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> info.cbse@gov.in</p>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 10px;">Public Grievance</h3>
+                    <p>For any grievances, please visit the PR Unit at the Head Office or use the online portal.</p>
+                    <br>
+                    <button class="btn-card" style="width: auto;">Lodge Grievance</button>
+                    <br><br>
+                    <p><strong>Helpline:</strong> 1800-11-8002 (General Enquiries)</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4><i class="fas fa-map-marker-alt"></i> Contact Us</h4>
+                <p><strong>Central Board of Secondary Education</strong></p>
+                <p>Shiksha Kendra-2, Community Centre,<br>Preet Vihar, Delhi - 110092</p>
+            </div>
+
+            <div class="footer-section">
+                <h4><i class="fas fa-link"></i> Important Links</h4>
+                <a href="#">&bull; National Education Policy (NEP) 2020</a>
+                <a href="#">&bull; Right to Information (RTI)</a>
+                <a href="#">&bull; Tenders & Contracts</a>
+                <a href="#">&bull; Grievance Redressal</a>
+            </div>
+
+            <div class="footer-section">
+                <h4><i class="fas fa-building"></i> Regional Offices</h4>
+                <a href="#">&bull; RO Delhi (East & West)</a>
+                <a href="#">&bull; RO Chennai</a>
+                <a href="#">&bull; RO Guwahati</a>
+                <a href="#">&bull; RO Pune</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Central Board of Secondary Education. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js">
+        console.log("Hello from CBSE main website!");
+    </script>
+</body>
+</html>

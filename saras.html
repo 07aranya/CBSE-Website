@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBSE SARAS - Affiliation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="header-text">
+                <h1>SARAS</h1>
+                <p>School Affiliation Re-Engineered Automation System</p>
+            </div>
+        </div>
+        <div class="header-controls">
+            <button id="theme-toggle" class="btn-toggle"><i class="fas fa-moon"></i> Dark Mode</button>
+        </div>
+    </header>
+
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Main Portal</a>
+
+    <main class="container">
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            
+            <div class="form-container" style="flex: 1; min-width: 300px;">
+                <h3 style="color: var(--primary-color); margin-bottom: 15px;"><i class="fas fa-lock"></i> School Login</h3>
+                <form>
+                    <div class="form-group">
+                        <label>Affiliation Number</label>
+                        <input type="text" placeholder="Enter Affiliation No.">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="Enter Password">
+                    </div>
+                    <button type="submit" class="btn-card" style="width: 100%; border: none; cursor: pointer;">Login</button>
+                </form>
+            </div>
+
+            <div class="card" style="flex: 1; min-width: 300px; text-align: left;">
+                <h3 style="color: var(--secondary-color);"><i class="fas fa-info-circle"></i> Important Links</h3>
+                <ul style="list-style: none; margin-top: 15px;">
+                    <li style="margin-bottom: 10px;"><a href="#" style="color: var(--text-color); text-decoration: none;">&bull; Apply for Fresh Affiliation</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#" style="color: var(--text-color); text-decoration: none;">&bull; Track Application Status</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#" style="color: var(--text-color); text-decoration: none;">&bull; Affiliation Bye-Laws 2018</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#" style="color: var(--text-color); text-decoration: none;">&bull; SARAS 4.0 Manual</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

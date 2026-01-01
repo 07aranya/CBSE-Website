@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBSE | Main Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/CBSE_new_logo.svg/1200px-CBSE_new_logo.svg.png" alt="CBSE Logo" class="logo">
+            <div class="header-text">
+                <h1>Central Board of Secondary Education</h1>
+                <p>Main Information Portal</p>
+            </div>
+        </div>
+        <div class="header-controls">
+            <a href="index.html" class="btn-card" style="margin: 0; padding: 8px 15px; font-size: 0.9rem;">
+                <i class="fas fa-arrow-left"></i> Back to Hub
+            </a>
+            <button id="theme-toggle" class="btn-toggle"><i class="fas fa-moon"></i> Dark Mode</button>
+        </div>
+    </header>
+
+    <nav class="navbar" style="background-color: var(--secondary-color);">
+        <ul style="justify-content: flex-start; padding-left: 20px;">
+            <li><a href="#" style="color: black; font-weight: bold;">Overview</a></li>
+            <li><a href="#" style="color: black; font-weight: bold;">Organization Structure</a></li>
+            <li><a href="#" style="color: black; font-weight: bold;">RTI</a></li>
+            <li><a href="#" style="color: black; font-weight: bold;">Media & PR</a></li>
+            <li><a href="#" style="color: black; font-weight: bold;">Vigilance</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        
+        <div class="main-layout">
+            
+            <div class="content-column">
+                
+                <div class="tab-container">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="circulars">Latest Circulars</button>
+                        <button class="tab-btn" data-tab="press">Press Releases</button>
+                        <button class="tab-btn" data-tab="events">Public Notices</button>
+                    </div>
+
+                    <div id="circulars" class="tab-content active">
+                        <ul class="notification-list">
+                            <li>
+                                <span class="date">29 Dec</span>
+                                <a href="#">Extension of Last Date for Registration of Class IX/XI 2024-25. <span class="new-tag">NEW</span></a>
+                            </li>
+                            <li>
+                                <span class="date">28 Dec</span>
+                                <a href="#">Sensitization Workshop on 'Holistic Progress Card'.</a>
+                            </li>
+                            <li>
+                                <span class="date">25 Dec</span>
+                                <a href="#">CBSE Science Challenge 2025-26 - Regarding.</a>
+                            </li>
+                            <li>
+                                <span class="date">20 Dec</span>
+                                <a href="#">Training Programme for Teachers on Cyber Security.</a>
+                            </li>
+                        </ul>
+                        <button class="btn-card" style="margin-top: 20px;">View Archive</button>
+                    </div>
+
+                    <div id="press" class="tab-content">
+                        <ul class="notification-list">
+                            <li><a href="#">Press Note: Conduct of Board Exams 2025 smoothly.</a></li>
+                            <li><a href="#">Clarification regarding Fake News on Exam Syllabus.</a></li>
+                            <li><a href="#">CBSE National Sports Meet 2024 concludes.</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="events" class="tab-content">
+                        <ul class="notification-list">
+                            <li><a href="#">Public Notice: Beware of Fake Website claiming to be CBSE.</a></li>
+                            <li><a href="#">Tender Notice for Printing of Answer Books.</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <aside class="sidebar-column">
+                
+                <div class="sidebar-box">
+                    <h3><i class="fas fa-user-tie"></i> Chairperson's Corner</h3>
+                    <div style="display: flex; gap: 10px; align-items: center; margin-top: 10px;">
+                        <i class="fas fa-user-circle" style="font-size: 3rem; color: #ccc;"></i>
+                        <p style="font-size: 0.9rem; line-height: 1.4;">
+                            "We strive to provide world-class education that fosters creativity and innovation."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3><i class="fas fa-bullseye"></i> In Focus</h3>
+                    <ul class="sidebar-links">
+                        <li><a href="#">&bull; Pariksha Pe Charcha 2025</a></li>
+                        <li><a href="#">&bull; Azadi Ka Amrit Mahotsav</a></li>
+                        <li><a href="#">&bull; Swachh Vidyalaya Puraskar</a></li>
+                        <li><a href="#">&bull; Fit India Movement</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box" style="background: var(--primary-color); color: white; text-align: center;">
+                    <i class="fas fa-phone-volume" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                    <h4>Helpline</h4>
+                    <p>1800-11-8002</p>
+                </div>
+
+            </aside>
+        </div>
+    </main>
+
+    <div id="system-modal" class="modal-overlay">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h3 id="modal-title"><i class="fas fa-info-circle"></i> System Notification</h3>
+            <button onclick="closeModal()" style="background:none; border:none; font-size:1.2rem; cursor:pointer; color:var(--text-color);">&times;</button>
+        </div>
+        <div class="modal-body" id="modal-message">
+            </div>
+        <div class="modal-footer">
+            <button onclick="closeModal()" class="btn-card" style="padding: 8px 20px;">Close</button>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Central Board of Secondary Education.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

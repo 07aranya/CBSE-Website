@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Triveni | CBSE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <div class="header-text">
+                <h1>Training Triveni</h1>
+                <p>Capacity Building Programmes & Teacher Training</p>
+            </div>
+        </div>
+        <div class="header-controls">
+            <a href="index.html" class="back-btn" style="margin:0; font-size: 0.9rem;">Back to Home</a>
+            <button id="theme-toggle" class="btn-toggle"><i class="fas fa-moon"></i> Dark Mode</button>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="filter-section">
+            <input type="text" id="search-input" placeholder="Search training by topic (e.g., 'AI', 'Maths')...">
+            <select id="mode-filter">
+                <option value="all">All Modes</option>
+                <option value="online">Online</option>
+                <option value="offline">Offline</option>
+            </select>
+            <button class="btn-card" style="margin: 0;" onclick="filterTrainings()">Search</button>
+        </div>
+
+        <h2 style="color: var(--primary-color); border-bottom: 2px solid #ccc; padding-bottom: 10px; margin-bottom: 20px;">
+            <i class="fas fa-calendar-alt"></i> Upcoming Programs
+        </h2>
+
+        <div class="training-grid" id="training-list">
+            
+            <div class="training-card" data-mode="online">
+                <div class="status-badge open">Registration Open</div>
+                <div class="t-date">
+                    <span class="d-day">15</span>
+                    <span class="d-month">JAN</span>
+                </div>
+                <div class="t-details">
+                    <h3>Artificial Intelligence Integration</h3>
+                    <p><i class="fas fa-desktop"></i> <strong>Mode:</strong> Online</p>
+                    <p><i class="fas fa-rupee-sign"></i> <strong>Fee:</strong> Free</p>
+                    <p><i class="fas fa-clock"></i> 10:00 AM - 01:00 PM</p>
+                </div>
+                <button class="btn-register" onclick="registerMsg('AI Integration')">Register</button>
+            </div>
+
+            <div class="training-card" data-mode="offline">
+                <div class="status-badge open">Registration Open</div>
+                <div class="t-date">
+                    <span class="d-day">20</span>
+                    <span class="d-month">JAN</span>
+                </div>
+                <div class="t-details">
+                    <h3>NEP 2020: Implementation Strategies</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Venue:</strong> COE Delhi East</p>
+                    <p><i class="fas fa-rupee-sign"></i> <strong>Fee:</strong> ₹ 500/-</p>
+                    <p><i class="fas fa-clock"></i> 09:30 AM - 04:00 PM</p>
+                </div>
+                <button class="btn-register" onclick="registerMsg('NEP 2020')">Register</button>
+            </div>
+
+            <div class="training-card" data-mode="online">
+                <div class="status-badge closed">Closed</div>
+                <div class="t-date">
+                    <span class="d-day">10</span>
+                    <span class="d-month">JAN</span>
+                </div>
+                <div class="t-details">
+                    <h3>Cyber Safety & Security</h3>
+                    <p><i class="fas fa-desktop"></i> <strong>Mode:</strong> Online</p>
+                    <p><i class="fas fa-rupee-sign"></i> <strong>Fee:</strong> Free</p>
+                    <p style="color: red; font-size: 0.8rem;">(Seats Full)</p>
+                </div>
+                <button class="btn-register disabled">Full</button>
+            </div>
+
+            <div class="training-card" data-mode="offline">
+                <div class="status-badge open">Registration Open</div>
+                <div class="t-date">
+                    <span class="d-day">05</span>
+                    <span class="d-month">FEB</span>
+                </div>
+                <div class="t-details">
+                    <h3>Happy Classrooms & Mental Well-being</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Venue:</strong> COE Pune</p>
+                    <p><i class="fas fa-rupee-sign"></i> <strong>Fee:</strong> ₹ 1000/-</p>
+                    <p><i class="fas fa-clock"></i> 10:00 AM - 05:00 PM</p>
+                </div>
+                <button class="btn-register" onclick="registerMsg('Happy Classrooms')">Register</button>
+            </div>
+
+        </div>
+
+        <div class="content-section" style="margin-top: 40px; background: #e8f4f8;">
+            <h3><i class="fas fa-certificate"></i> Already attended a training?</h3>
+            <p>Download your E-Certificate by entering your Reference ID.</p>
+            <div style="margin-top: 15px; display: flex; gap: 10px; max-width: 500px;">
+                <input type="text" placeholder="Enter Reference ID" style="flex: 1; padding: 10px;">
+                <button class="btn-card" style="margin: 0;">Download</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Central Board of Secondary Education.</p>
+        </div>
+    </footer>
+
+    <script>
+        function registerMsg(course) {
+            alert("Redirecting to payment gateway for: " + course);
+        }
+
+        // Simple Filter Logic
+        function filterTrainings() {
+            const input = document.getElementById('search-input').value.toLowerCase();
+            const mode = document.getElementById('mode-filter').value;
+            const cards = document.querySelectorAll('.training-card');
+
+            cards.forEach(card => {
+                const title = card.querySelector('h3').innerText.toLowerCase();
+                const cardMode = card.getAttribute('data-mode');
+                
+                let matchesSearch = title.includes(input);
+                let matchesMode = (mode === 'all') || (mode === cardMode);
+
+                if (matchesSearch && matchesMode) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

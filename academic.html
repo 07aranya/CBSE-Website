@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBSE | Academic</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header style="border-bottom: 5px solid #27ae60;">
+        <div class="logo-container">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/CBSE_new_logo.svg/1200px-CBSE_new_logo.svg.png" alt="CBSE Logo" class="logo">
+            <div class="header-text">
+                <h1>CBSE Academic</h1>
+                <p>Curriculum, Pedagogy & Training</p>
+            </div>
+        </div>
+        <div class="header-controls">
+            <a href="index.html" class="back-btn" style="margin:0; font-size: 0.9rem;">Back to Home</a>
+            <button id="theme-toggle" class="btn-toggle"><i class="fas fa-moon"></i> Dark Mode</button>
+        </div>
+    </header>
+
+    <nav class="navbar" style="background-color: #27ae60;">
+        <ul style="justify-content: flex-start; padding-left: 20px;">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Curriculum</a></li>
+            <li><a href="#">Question Bank</a></li>
+            <li><a href="#">Training</a></li>
+            <li><a href="#">Publications</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        
+        <div class="main-layout">
+            
+            <div class="content-column">
+                
+                <div class="content-section" style="margin-top: 0; padding: 20px; border-left: 5px solid #27ae60;">
+                    <h2 style="color: #27ae60;"><i class="fas fa-book"></i> Curriculum 2025-26</h2>
+                    <p style="margin-bottom: 15px;">Secondary and Senior Secondary Curriculum for the upcoming academic session.</p>
+                    
+                    <table>
+                        <thead>
+                            <tr style="background-color: #27ae60; color: white;">
+                                <th>Class</th>
+                                <th>Subject</th>
+                                <th>Format</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>IX - X</td>
+                                <td>Mathematics (Main)</td>
+                                <td>PDF</td>
+                                <td><button class="btn-card" style="background: #27ae60; padding: 5px 10px; font-size: 0.8rem;" onclick="simulateDownload('Maths_Sec_2025.pdf')"><i class="fas fa-download"></i> Download</button></td>
+                            </tr>
+                            <tr>
+                                <td>IX - X</td>
+                                <td>Science</td>
+                                <td>PDF</td>
+                                <td><button class="btn-card" style="background: #27ae60; padding: 5px 10px; font-size: 0.8rem;" onclick="simulateDownload('Science_Sec_2025.pdf')"><i class="fas fa-download"></i> Download</button></td>
+                            </tr>
+                            <tr>
+                                <td>XI - XII</td>
+                                <td>Physics</td>
+                                <td>PDF</td>
+                                <td><button class="btn-card" style="background: #27ae60; padding: 5px 10px; font-size: 0.8rem;" onclick="simulateDownload('Physics_SrSec_2025.pdf')"><i class="fas fa-download"></i> Download</button></td>
+                            </tr>
+                            <tr>
+                                <td>XI - XII</td>
+                                <td>Computer Science</td>
+                                <td>PDF</td>
+                                <td><button class="btn-card" style="background: #27ae60; padding: 5px 10px; font-size: 0.8rem;" onclick="simulateDownload('CS_SrSec_2025.pdf')"><i class="fas fa-download"></i> Download</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="content-section" style="padding: 20px; border-left: 5px solid #e67e22;">
+                    <h2 style="color: #e67e22;"><i class="fas fa-file-alt"></i> Sample Question Papers (SQP)</h2>
+                    <p style="margin-bottom: 15px;">Practice papers for Board Exams 2025.</p>
+
+                    <table>
+                        <thead>
+                            <tr style="background-color: #e67e22; color: white;">
+                                <th>Class</th>
+                                <th>Subject</th>
+                                <th>File</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Class X</td>
+                                <td>Social Science SQP</td>
+                                <td>PDF</td>
+                                <td><button class="btn-card" style="background: #e67e22; padding: 5px 10px; font-size: 0.8rem;" onclick="simulateDownload('SQP_Social_X.pdf')"><i class="fas fa-download"></i> Download</button></td>
+                            </tr>
+                            <tr>
+                                <td>Class XII</td>
+                                <td>Accountancy SQP</td>
+                                <td>PDF</td>
+                                <td><button class="btn-card" style="background: #e67e22; padding: 5px 10px; font-size: 0.8rem;" onclick="simulateDownload('SQP_Accountancy_XII.pdf')"><i class="fas fa-download"></i> Download</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <aside class="sidebar-column">
+                
+                <div class="sidebar-box" style="border-top: 4px solid #27ae60;">
+                    <h3 style="color: #27ae60;"><i class="fas fa-bullhorn"></i> Academic Notifications</h3>
+                    <ul class="sidebar-links">
+                        <li><a href="#" onclick="showModal('Notification', 'Opening of Portal for Marks Verification')">&bull; Marks Verification 2025</a></li>
+                        <li><a href="#" onclick="showModal('Notification', 'List of invalid subject combinations')">&bull; Subject Combinations</a></li>
+                        <li><a href="#" onclick="showModal('Notification', 'Introduction of Skill Subjects')">&bull; New Skill Subjects</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box" style="background: #f9f9f9;">
+                    <h3 style="color: #333;"><i class="fas fa-book-reader"></i> Handbooks</h3>
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <i class="fas fa-book" style="font-size: 4rem; color: #27ae60;"></i>
+                    </div>
+                    <button class="btn-card" style="width: 100%; background: #27ae60;" onclick="simulateDownload('Exam_ByeLaws.pdf')">Exam Bye-Laws</button>
+                    <button class="btn-card" style="width: 100%; background: #27ae60; margin-top: 10px;" onclick="simulateDownload('Affiliation_ByeLaws.pdf')">Affiliation Bye-Laws</button>
+                </div>
+
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CBSE Academic Unit.</p>
+        </div>
+    </footer>
+
+    <div id="system-modal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 id="modal-title"><i class="fas fa-info-circle"></i> System Notification</h3>
+                <button onclick="closeModal()" style="background:none; border:none; font-size:1.2rem; cursor:pointer; color:var(--text-color);">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-message"></div>
+            <div class="modal-footer">
+                <button onclick="closeModal()" class="btn-card" style="padding: 8px 20px;">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
